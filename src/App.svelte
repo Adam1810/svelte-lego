@@ -51,11 +51,11 @@
 		console.error(error);
 	  }
 	}
-	const handleGetSetClick = () => {
-		promise  = fetch(
-			`http://localhost:3000/api/v1/sets/${searchTerm}`
-		).then((x) => x.json());
-	}
+	// const handleGetSetClick = () => {
+	// 	promise  = fetch(
+	// 		`http://localhost:3000/api/v1/sets/${searchTerm}`
+	// 	).then((x) => x.json());
+	// }
 
 	
 	// async function searchSet(e){
@@ -82,6 +82,7 @@
 		// core components
 		// let promise = searchSet();
 	getSets();
+
 	//searchSet();
   </script>
 
@@ -113,16 +114,14 @@ main{
 		<input type=text id="searchterm" bind:value={searchTerm}>
 	<button on:click={searchSet}>Search</button> -->
 	
-	<button on:click={handleGetSetClick}>Get Set</button>
-	{#await promise}
+	<!-- <button on:click={handleGetSetClick}>Get Set</button> -->
+	<!-- {#await promise}
 	<p>...waiting</p>
 	{:then data}
 	<p>{JSON.stringify(data, null, 2)}</p>
 	{/await}
-
-	<div class="sets">
-		{#if sets.length > 0}
-		<table>
+		{#if sets.length > 0} -->
+		<!-- <table>
 		
 		<thead>
 			<tr>
@@ -154,12 +153,9 @@ main{
 		</tbody>
 		
 	</table>
-	{:else}No sets to show yet{/if}
-	</div>
-	<div class="update-block">
-		<!-- <input type="text" placeholder="Search for set" bind:value={searchTerm} /> -->
-		<button on:click={getSets}>Update</button>
-	  </div>
+	{:else}No sets to show yet{/if} -->
+
+
  </main>
  <Footer />
 
